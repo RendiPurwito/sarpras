@@ -12,7 +12,7 @@ class LoginController extends Controller
         if (Auth::attempt($request->only('email', 'password'))) {
             return redirect ('home');
         }
-        return redirect ('login');
+        return redirect ('/');
     }
 
     public function logout(Request $request)
