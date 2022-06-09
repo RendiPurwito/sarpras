@@ -19,13 +19,10 @@
                 @foreach($data as $index => $row)
                 <tr>
                     <th scope="row">{{ $index + $data->firstItem() }}</th>
-                    <td>{{$row->nama_barang}}</td>
-                    <td>{{$row->stok_barang}}</td>
-                    <td>{{$row->jenis_barang}}</td>
-                    <td>
-                        <a href="{{asset('images/'.$row->foto)}}" target="_blank"
-                            rel="noopener noreferrer">Lihat Gambar</a>
-                    </td>
+                    <td>{{ $row->nama_barang }}</td>
+                    <td>{{ $row->stok_barang }}</td>
+                    <td>{{ $row->jenis_barang }}</td>
+                    <td>{{ $row->foto }}</td>
                     <td>{{ $row->keterangan }}</td>
                     <td>
                         <a href="" class="text-warning">
