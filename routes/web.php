@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\BarangKeluarController;
 use App\Http\Controllers\BarangMasukController;
 use App\Http\Controllers\ChangePasswordController;
 
@@ -40,3 +41,6 @@ Route::get('/barang', [BarangController::class, 'index'])->name('barang');
 
 // barang masuk
 Route::get('/barangmasuk', [BarangMasukController::class, 'masuk'])->name('barangmasuk');
+
+// barang keluar
+Route::get('/barangkeluar', [BarangKeluarController::class, 'keluar'])->name('barangkeluar');
