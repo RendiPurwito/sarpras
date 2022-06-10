@@ -30,7 +30,7 @@
                         </td>
                         <td>{{ $row->tanggal_masuk}}</td>
                         <td>
-                            <a href="/editbarangmasuk/{{$row->id}}" class="text-warning">
+                            <a href="/editbarangmasuk/{{$row->id_barang}}" class="text-warning">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                                     class="bi bi-pencil-square" viewBox="0 0 16 16">
                                     <path
@@ -40,7 +40,7 @@
                                 </svg>
                             </a>|
 
-                            <a href="/deletebarangmasuk/{{$row->id}}" class="text-danger">
+                            <a href="/deletebarangmasuk/{{$row->id_barang}}" class="text-danger">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                                     class="bi bi-trash" viewBox="0 0 16 16">
                                     <path
