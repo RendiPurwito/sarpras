@@ -24,7 +24,10 @@
                         <td>{{ $row->nama_barang }}</td>
                         <td>{{ $row->jenis_barang }}</td>
                         <td>{{ $row->stok_masuk }}</td>
-                        <td>{{ $row->foto }}</td>
+                        <td>
+                            <a href="{{asset('images/'.$row->foto)}}" target="_blank" rel="noopener noreferrer">Lihat
+                                Gambar</a>
+                        </td>
                         <td>{{ $row->tanggal_masuk}}</td>
                         <td>
                             <a href="/editbarangmasuk/{{$row->id}}" class="text-warning">

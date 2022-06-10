@@ -32,13 +32,13 @@ class BarangMasukController extends Controller
         ]);
     
         BarangMasuk::create($request->all());
-        return redirect()->route('barang');
+        return redirect()->route('Data Barang Masuk.table');
     }
 
     public function edit($id){
         $data = BarangMasuk::find($id);
         $databarang = Barang::all();
-        return view('Data Barang Masuk.formedit', compact('data'));
+        return view('Data Barang Masuk.formedit', compact('data', 'databarang'));
     }
 
     public function update(Request $request, $id){

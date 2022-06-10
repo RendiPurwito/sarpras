@@ -10,8 +10,8 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Nama Barang</th>
-                        <th scope="col">Stok Barang</th>
                         <th scope="col">Jenis Barang</th>
+                        <th scope="col">Stok Barang</th>
                         <th scope="col">Foto Barang</th>
                         <th scope="col">Keterangan</th>
                         <th scope="col">Action</th>
@@ -22,8 +22,8 @@
                     <tr>
                         <th scope="row">{{ $index + $data->firstItem() }}</th>
                         <td>{{ $row->nama_barang }}</td>
-                        <td>{{ $row->stok_barang }}</td>
                         <td>{{ $row->jenis_barang }}</td>
+                        <td>{{ $row->stok_barang }}</td>
                         <td>
                             <a href="{{asset('images/'.$row->foto)}}" target="_blank" rel="noopener noreferrer">Lihat
                                 Gambar</a>
