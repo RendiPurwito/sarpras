@@ -41,7 +41,12 @@
     
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Foto Barang</label>
-                    <input type="file" class="form-control" name="foto" value="{{ $data->foto }}">
+                    <div class="form-group">
+                        <img src="{{asset('images/'.$data->foto)}}" style="width: 100px">
+                    </div>
+                    <div class="form-group mt-3">
+                        <input type="file" class="form-control" name="foto">
+                    </div>
                     @error('foto')
                     <div class="text-danger">
                         {{ $message }}

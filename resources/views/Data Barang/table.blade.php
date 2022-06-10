@@ -11,7 +11,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Nama Barang</th>
                         <th scope="col">Stok Barang</th>
-                        <th scope="col">Jenis</th>
+                        <th scope="col">Jenis Barang</th>
                         <th scope="col">Foto Barang</th>
                         <th scope="col">Keterangan</th>
                         <th scope="col">Action</th>

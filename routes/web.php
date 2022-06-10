@@ -36,6 +36,7 @@ Route::get('/home', function () {
     return view('dashboard');
 })->name('home');
 
+// Barang
 Route::get('/barang', [BarangController::class, 'index'])->name('barang');
 Route::get('/tambahbarang',[BarangController::class, 'create'])->name('tambahbarang');
 Route::post('/insertbarang',[BarangController::class, 'store'])->name('insertbarang');
@@ -43,8 +44,18 @@ Route::get('/editbarang/{id}',[BarangController::class, 'edit'])->name('editbara
 Route::put('/updatebarang/{id}',[BarangController::class, 'update'])->name('updatebarang');
 Route::get('/deletebarang/{id}',[BarangController::class, 'destroy'])->name('deletebarang');
 
-// barang masuk
-Route::get('/barangmasuk', [BarangMasukController::class, 'masuk'])->name('barangmasuk');
+// Barang Masuk
+Route::get('/barangmasuk', [BarangMasukController::class, 'index'])->name('barangmasuk');
+Route::get('/tambahbarangmasuk',[BarangMasukController::class, 'create'])->name('tambahbarangmasuk');
+Route::post('/insertbarangmasuk',[BarangMasukController::class, 'store'])->name('insertbarangmasuk');
+Route::get('/editbarangmasuk/{id}',[BarangMasukController::class, 'edit'])->name('editbarangmasuk');
+Route::put('/updatebarangmasuk/{id}',[BarangMasukController::class, 'update'])->name('updatebarangmasuk');
+Route::get('/deletebarangmasuk/{id}',[BarangMasukController::class, 'destroy'])->name('deletebarangmasuk');
 
-// barang keluar
+// Barang Keluar
 Route::get('/barangkeluar', [BarangKeluarController::class, 'keluar'])->name('barangkeluar');
+Route::get('/tambahbarangkeluar',[BarangMasukController::class, 'create'])->name('tambahbarangkeluar');
+Route::post('/insertbarangkeluar',[BarangMasukController::class, 'store'])->name('insertbarangkeluar');
+Route::get('/editbarangkeluar/{id}',[BarangMasukController::class, 'edit'])->name('editbarangkeluar');
+Route::put('/updatebarangkeluar/{id}',[BarangMasukController::class, 'update'])->name('updatebarangkeluar');
+Route::get('/deletebarangkeluar/{id}',[BarangMasukController::class, 'destroy'])->name('deletebarangkeluar');

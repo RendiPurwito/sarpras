@@ -18,14 +18,12 @@ return new class extends Migration
             $table->id();
             $table->string('nama_peminjam');
             $table->foreignId('barang_id');
-            $table->binary('foto');
+            $table->string('foto');
             $table->integer('jumlah_barang');
             $table->date('tanggal_keluar');
             $table->string('keterangan');
             $table->timestamps();
         });
-
-        DB::statement("ALTER TABLE barang_keluars MODIFY foto MEDIUMBLOB");
     }
 
     /**

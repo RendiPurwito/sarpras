@@ -17,14 +17,11 @@ return new class extends Migration
         Schema::create('barang_masuks', function (Blueprint $table) {
             $table->id();
             $table->foreignId('barang_id');
-            $table->string('nama_barang');
-            $table->binary('foto');
             $table->integer('stok_masuk');
+            $table->string('foto');
             $table->date('tanggal_masuk');
             $table->timestamps();
         });
-
-        DB::statement("ALTER TABLE barang_masuks MODIFY foto MEDIUMBLOB");
     }
 
     /**
