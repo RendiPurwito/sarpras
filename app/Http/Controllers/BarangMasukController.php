@@ -32,7 +32,7 @@ class BarangMasukController extends Controller
         ]);
     
         BarangMasuk::create($request->all());
-        return redirect()->route('Data Barang Masuk.table');
+        return redirect()->route('barangmasuk');
     }
 
     public function edit($id){
