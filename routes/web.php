@@ -37,7 +37,11 @@ Route::get('/home', function () {
 })->name('home');
 
 Route::get('/barang', [BarangController::class, 'index'])->name('barang');
-
+Route::get('/tambahbarang',[BarangController::class, 'create'])->name('tambahbarang');
+Route::post('/insertbarang',[BarangController::class, 'store'])->name('insertbarang');
+Route::get('/editbarang/{id}',[BarangController::class, 'edit'])->name('editbarang');
+Route::put('/updatebarang/{id}',[BarangController::class, 'update'])->name('updatebarang');
+Route::get('/deletebarang/{id}',[BarangController::class, 'destroy'])->name('deletebarang');
 
 // barang masuk
 Route::get('/barangmasuk', [BarangMasukController::class, 'masuk'])->name('barangmasuk');
