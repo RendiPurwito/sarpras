@@ -66,7 +66,7 @@
                                 <i class="fa fa-table ms-5 me-2"></i>Data Barang</a>
                             <a href="/barangmasuk" class="dropdown-item">
                                 <i class="fa fa-table ms-5 me-2"></i>Data Barang Masuk</a>
-                            <a href="" class="dropdown-item">
+                            <a href="/barangkeluar" class="dropdown-item">
                                 <i class="fa fa-table ms-5 me-2"></i>Data Barang Keluar</a>
                         </div>
                     </div>
