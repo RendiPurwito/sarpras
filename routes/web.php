@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\OperatorController;
@@ -37,10 +38,8 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
     // Home
-    Route::get('/home', function () {
-        return view('dashboard');
-    })->name('home');
-
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    
     // Operator
     Route::get('/operator', [OperatorController::class, 'index'])->name('operator');
     Route::get('/tambahoperator',[OperatorController::class, 'create'])->name('tambahoperator');
