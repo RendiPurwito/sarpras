@@ -4,8 +4,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BarangController;
-use App\Http\Controllers\BarangKeluarController;
+use App\Http\Controllers\OperatorController;
 use App\Http\Controllers\BarangMasukController;
+use App\Http\Controllers\BarangKeluarController;
 use App\Http\Controllers\ChangePasswordController;
 
 /*
@@ -36,6 +37,14 @@ Route::get('/home', function () {
     return view('dashboard');
 })->name('home');
 
+// Operator
+Route::get('/operator', [OperatorController::class, 'index'])->name('operator');
+Route::get('/tambahoperator',[OperatorController::class, 'create'])->name('tambahoperator');
+Route::post('/insertoperator',[OperatorController::class, 'store'])->name('insertoperator');
+Route::get('/editoperator/{id}',[OperatorController::class, 'edit'])->name('editoperator');
+Route::put('/updateoperator/{id}',[OperatorController::class, 'update'])->name('updateoperator');
+Route::get('/deleteoperator/{id}',[OperatorController::class, 'destroy'])->name('deleteoperator');
+
 // Barang
 Route::get('/barang', [BarangController::class, 'index'])->name('barang');
 Route::get('/tambahbarang',[BarangController::class, 'create'])->name('tambahbarang');
@@ -54,8 +63,8 @@ Route::get('/deletebarangmasuk/{id}',[BarangMasukController::class, 'destroy'])-
 
 // Barang Keluar
 Route::get('/barangkeluar', [BarangKeluarController::class, 'keluar'])->name('barangkeluar');
-Route::get('/tambahbarangkeluar',[BarangMasukController::class, 'create'])->name('tambahbarangkeluar');
-Route::post('/insertbarangkeluar',[BarangMasukController::class, 'store'])->name('insertbarangkeluar');
-Route::get('/editbarangkeluar/{id}',[BarangMasukController::class, 'edit'])->name('editbarangkeluar');
-Route::put('/updatebarangkeluar/{id}',[BarangMasukController::class, 'update'])->name('updatebarangkeluar');
-Route::get('/deletebarangkeluar/{id}',[BarangMasukController::class, 'destroy'])->name('deletebarangkeluar');
+Route::get('/tambahbarangkeluar',[BarangKeluarController::class, 'create'])->name('tambahbarangkeluar');
+Route::post('/insertbarangkeluar',[BarangKeluarController::class, 'store'])->name('insertbarangkeluar');
+Route::get('/editbarangkeluar/{id}',[BarangKeluarController::class, 'edit'])->name('editbarangkeluar');
+Route::put('/updatebarangkeluar/{id}',[BarangKeluarController::class, 'update'])->name('updatebarangkeluar');
+Route::get('/deletebarangkeluar/{id}',[BarangKeluarController::class, 'destroy'])->name('deletebarangkeluar');

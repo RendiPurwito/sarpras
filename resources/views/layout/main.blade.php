@@ -62,11 +62,13 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-table me-2"></i>Tables</a>
                         <div class="dropdown-menu bg-transparent border-0">
+                            <a href="{{route('operator')}}" class="dropdown-item">
+                                <i class="fa fa-table ms-5 me-2"></i>Data Operator</a>
                             <a href="{{route('barang')}}" class="dropdown-item">
                                 <i class="fa fa-table ms-5 me-2"></i>Data Barang</a>
-                            <a href="/barangmasuk" class="dropdown-item">
+                            <a href="{{route('barangmasuk')}}" class="dropdown-item">
                                 <i class="fa fa-table ms-5 me-2"></i>Data Barang Masuk</a>
-                            <a href="/barangkeluar" class="dropdown-item">
+                            <a href="{{route('barangkeluar')}}" class="dropdown-item">
                                 <i class="fa fa-table ms-5 me-2"></i>Data Barang Keluar</a>
                         </div>
                     </div>

@@ -33,7 +33,7 @@ class BarangKeluarController extends Controller
             'operator' => 'required',
         ]);
     
-        BarangMasuk::create($request->all());
+        BarangKeluar::create($request->all());
         return redirect()->route('barangkeluar');
     }
 }
