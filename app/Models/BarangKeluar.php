@@ -12,4 +12,10 @@ class BarangKeluar extends Model
     public function keluarbarang(){
         return $this->belongsTo(Barang::class, 'barang_id', 'id');
     }
+
+    public function operatorkeluar(){
+        return $this->belongsTo(Users::class, 'user_id', 'id');
+    }
+
+    
 }

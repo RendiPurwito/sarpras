@@ -61,7 +61,8 @@
 
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Operator</label>
-                    <input type="text" class="form-control" name="operator">
+                    <input type="select" class="form-control" name="operator_id">
+                    
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

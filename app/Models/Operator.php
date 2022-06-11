@@ -12,4 +12,8 @@ class Operator extends Model
     public function operatoruser(){
         return $this->belongsTo(User::class, 'user_id', 'id');
     }
+
+    public function keluaroperator(){
+        return $this->hasone(Operator::class);
+    }
 }

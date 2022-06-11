@@ -8,8 +8,9 @@ use Illuminate\Support\Facades\Auth;
 class LoginController extends Controller
 {
     public function postlogin(Request $request){
-        // dd($request->all());
+        // dd($request); 
         if (Auth::attempt($request->only('email', 'password'))) {
+            $request->session()->regenerate();
             return redirect ('home');
         }
         return redirect ('/');
